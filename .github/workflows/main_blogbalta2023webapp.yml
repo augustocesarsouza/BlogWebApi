@@ -25,11 +25,6 @@ jobs:
           dotnet-version: "6.0.x"
           include-prerelease: true
 
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
